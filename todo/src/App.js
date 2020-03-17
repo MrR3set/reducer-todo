@@ -10,7 +10,6 @@ function App() {
   
 
   const clicked = () =>{
-    console.log("clicked");
     dispatch({type:"CLEAR_COMPLETED"})
   }
   return (
