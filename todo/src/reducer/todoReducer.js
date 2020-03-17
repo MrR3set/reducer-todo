@@ -5,7 +5,7 @@ export const initialState = [
     id: 3892987589
   },
   {
-    item: 'cry about reducers',
+    item: 'Cry about reducers',
     completed: false,
     id: 1241225
   }
@@ -25,7 +25,12 @@ export const todoReducer = (state,action) => {
       return (state.map(task => {
         if(task.id===action.payload){
           task.completed=!task.completed
-          return task
+          if(task.completed===true){
+            task={...task,completedOn:Date.now()}
+          }else{
+            task={...task,completedOn:null}
+          }
+          return {...task}
         }else{
           return task
         }

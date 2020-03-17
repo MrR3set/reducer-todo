@@ -13,8 +13,6 @@ function App() {
     console.log("clicked");
     dispatch({type:"CLEAR_COMPLETED"})
   }
-  console.log("state",state);
-  console.log("initialState",initialState);
   return (
     <div className="app-container">
       <div className="app-wrapper">
